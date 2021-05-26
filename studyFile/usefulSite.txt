@@ -1,0 +1,18 @@
+- 코드 시그널 (https://app.codesignal.com)
+    최근에 생긴 알고리즘 풀이 사이트
+
+- 코드포스 (https://codeforces.com)
+    알고리즘 문제 풀이 사이트로 알고리즘 대회를 1주에 1번
+
+- 정올 (https://www.jungol.co.kr)
+    오래된 국내 알고리즘 문제 풀이 사이트
+
+- 생활코딩 (https://opentutorials.org)
+    개발 관련 다양한 강좌가 있음
+    커뮤니티 (https://www.facebook.com/groups/174499879257223)
+
+- BOJ Slack (https://acmicpc.slack.com)
+    백준 온라인 저지에서 알고리즘 문제를 풀며 활동하는 사람들이 있는 슬랙
+
+- 면접 팁 (https://github.com/JaeYeopHan/Interview_Question_for_Deginner)
+    국내 기술 면접 가이드라인
