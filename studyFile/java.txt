@@ -1,0 +1,6 @@
+* 정렬
+    Collections.sort(array); ==> array 부분에 ArrayList 같은 배열을 넣음
+
+* 시간
+    System.currentTimeMillis(); ==> 현재 밀리세컨드 반환
+    

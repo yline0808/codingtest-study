@@ -1,0 +1,7 @@
+* git 명령어
+    git log --oneline ==> 깃 로그에서 제목만 보이도록
+
+* git commit message tip
+    1. 제목은 명령조로 사용
+    2. 아래 내용은 한줄 띄우고 사용 (<git log --oneline> 사용시 보기 편하기 위해)
+
