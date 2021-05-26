@@ -1,6 +1,6 @@
 package chapter01;
 
-public class Test01 {
+public class Test00_time {
     public static void main(String[] args) {
         System.out.print("Hello world");
 
