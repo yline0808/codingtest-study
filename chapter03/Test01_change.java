@@ -5,7 +5,7 @@ package chapter03;
  * 
  * 화폐의 종류가 K개라고 할 때 시간복잡도 O(K)
  */
-public class Test00_change {
+public class Test01_change {
     public static void main(String[] args) {
         final int[] coin = { 500, 100, 50, 10 };
         int change = 1260;

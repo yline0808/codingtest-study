@@ -1,7 +1,6 @@
 package chapter03;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -19,7 +18,7 @@ import java.util.Scanner;
  * 기본적인 방법
  */
 
-public class Test01_bigNumber {
+public class Test02_bigNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -50,6 +49,21 @@ public class Test01_bigNumber {
         // =======test2=========
         result = 0;
         startTime = System.currentTimeMillis();
+
+        while (true) {
+            for (int i = 0; i < k; i++) {
+                if (m == 0) {
+                    break;
+                }
+                result += bigNum;
+                m--;
+            }
+            if (m == 0) {
+                break;
+            }
+            result += smallNum;
+            m--;
+        }
 
         endTime = System.currentTimeMillis();
         System.out.println((endTime - startTime) + ":return : " + result);
