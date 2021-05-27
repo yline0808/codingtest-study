@@ -17,4 +17,9 @@ public class MyPrinter {
     public static void pResult(long startTime, long endTime, int result) {
         System.out.printf("%f : result : %d\n", (endTime - startTime) / 1000.0, result);
     }
+
+    public static void pResult(long startTime, long endTime, int[] result) {
+        System.out.printf("%f : result : ", (endTime - startTime) / 1000.0);
+        pList(result);
+    }
 }
