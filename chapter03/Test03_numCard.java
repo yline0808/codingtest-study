@@ -2,7 +2,7 @@ package chapter03;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import mylib.MyPrinter;
+import mylib.MyLibs;
 
 /*
  * N : 행, M : 열
@@ -27,7 +27,7 @@ public class Test03_numCard {
         scanner.close();
 
         System.out.printf("%d, %d\n", n, m);
-        MyPrinter.pList(arr);
+        MyLibs.pList(arr);
 
         long startTime = System.currentTimeMillis();
 

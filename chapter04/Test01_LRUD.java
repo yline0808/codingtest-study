@@ -2,7 +2,7 @@ package chapter04;
 
 import java.util.Scanner;
 
-import mylib.MyPrinter;
+import mylib.MyLibs;
 
 /*
  * n x n 의 지도가 있고 시작지점은 항상 1, 1
@@ -43,6 +43,6 @@ public class Test01_LRUD {
         }
 
         long endTime = System.currentTimeMillis();
-        MyPrinter.pResult(startTime, endTime, result);
+        MyLibs.pResult(startTime, endTime, result);
     }
 }

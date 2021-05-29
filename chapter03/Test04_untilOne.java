@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 최소 과정을 구하기
  */
 
-import mylib.MyPrinter;
+import mylib.MyLibs;
 
 public class Test04_untilOne {
     public static void main(String[] args) {
@@ -47,6 +47,6 @@ public class Test04_untilOne {
 
         long endTime = System.currentTimeMillis();
 
-        MyPrinter.pResult(startTime, endTime, result);
+        MyLibs.pResult(startTime, endTime, result);
     }
 }
