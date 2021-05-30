@@ -35,7 +35,6 @@ public class Test04_game {
         sc.close();
 
         int[][] map = { { 1, 1, 1, 1 }, { 1, 0, 0, 1 }, { 1, 1, 0, 1 }, { 1, 1, 1, 1 } };
-        int[][] d = new int[row][col];
 
         map[y][x] = 2;
         int turnCnt = 0;
