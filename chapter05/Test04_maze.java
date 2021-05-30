@@ -61,7 +61,7 @@ public class Test04_maze {
                     continue;
                 if (map[ny][nx] == 0)
                     continue;
-                if (map[ny][nx] == 1 && ny != 0 && nx != 0) {
+                if (map[ny][nx] == 1) {
                     map[ny][nx] = map[y][x] + 1;
                     q.offer(new Node04(nx, ny));
                 }
