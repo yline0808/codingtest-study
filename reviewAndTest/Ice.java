@@ -1,4 +1,4 @@
-package review;
+package reviewAndTest;
 
 public class Ice {
     public static int row = 15, col = 14;
