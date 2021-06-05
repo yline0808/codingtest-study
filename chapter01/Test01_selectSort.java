@@ -8,7 +8,7 @@ public class Test01_selectSort {
     public static void main(String[] args) {
         int arrSize = 10000;
         Random random = new Random();
-        ArrayList array = new ArrayList<Integer>();
+        ArrayList<Integer> array = new ArrayList<Integer>();
 
         // 선택정렬 구현
         for (int i = 0; i < arrSize; i++) {
