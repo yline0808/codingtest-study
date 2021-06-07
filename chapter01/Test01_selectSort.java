@@ -34,7 +34,7 @@ public class Test01_selectSort {
         System.out.println("total time : " + (endTime - startTime) / 1000.0);
 
         // 기본 정렬
-        ArrayList array2 = new ArrayList<Integer>();
+        ArrayList<Integer> array2 = new ArrayList<Integer>();
 
         for (int i = 0; i < arrSize; i++) {
             array2.add(random.nextInt(100) + 1);
