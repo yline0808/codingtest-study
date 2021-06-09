@@ -27,7 +27,7 @@ public class Test02_bigNumber {
         int m = scanner.nextInt();
         int k = scanner.nextInt();
 
-        ArrayList arr = new ArrayList<Integer>();
+        ArrayList<Integer> arr = new ArrayList<Integer>();
 
         for (int i = 0; i < n; i++) {
             arr.add(scanner.nextInt());
