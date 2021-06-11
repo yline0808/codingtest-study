@@ -6,6 +6,11 @@ import java.util.HashMap;
 
 import mylib.MyLibs;
 
+/*
+ * Bost6.java 파일이 더 좋은코드 인듯
+ * 이건 내가 한거
+ */
+
 public class Bost {
     public static ArrayList<Integer> cntArr(ArrayList<Integer> arr) {
         HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
