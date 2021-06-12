@@ -2,6 +2,12 @@ package programmers.level1;
 
 import java.util.HashMap;
 
+/*
+ * 제목 : 완주하지 못한 선수
+ * url : https://programmers.co.kr/learn/courses/30/lessons/42576
+ * 유형 : 해시
+ */
+
 public class Marathon {
     public static void main(String[] args) {
         String[] participant = { "mislav", "stanko", "mislav", "ana" };
