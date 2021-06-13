@@ -55,6 +55,10 @@ public class MyLibs {
         pList(result);
     }
 
+    public static void pResult(long startTime, long endTime, String result) {
+        System.out.printf("%f : result : %s\n", (endTime - startTime) / 1000.0, result);
+    }
+
     public static void iList(int[] arr, Scanner sc) {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
