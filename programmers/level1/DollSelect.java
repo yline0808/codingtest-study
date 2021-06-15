@@ -1,9 +1,6 @@
 package programmers.level1;
 
 import java.util.ArrayList;
-import java.util.Stack;
-
-import mylib.MyLibs;
 
 /*
  * 제목 : 크레인 인형뽑기 게임
@@ -27,7 +24,6 @@ public class DollSelect {
         for (int i = 0; i < moves.length; i++) {
             for (int j = 0; j < board.length; j++) {
                 if (board[j][moves[i] - 1] != 0) {
-                    // stack.add(board[j][moves[i] - 1]);
                     list.add(board[j][moves[i] - 1]);
                     board[j][moves[i] - 1] = 0;
                     break;
