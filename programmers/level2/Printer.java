@@ -9,24 +9,6 @@ import java.util.PriorityQueue;
  * 유형 : 스택/큐
  */
 
-class PrintItem {
-    private int location;
-    private int priority;
-
-    PrintItem(int location, int priority) {
-        this.location = location;
-        this.priority = priority;
-    }
-
-    public int getLocation() {
-        return this.location;
-    }
-
-    public int getPriority() {
-        return this.priority;
-    }
-}
-
 public class Printer {
     public static void main(String[] args) {
         int[] priorities = { 2, 1, 3, 2 };
@@ -37,15 +19,10 @@ public class Printer {
 
     public static int solution(int[] priorities, int location) {
         int answer = 0;
-        // PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
         for (int priority : priorities)
             pq.offer(priority);
-
-        for (int test : pq) {
-            System.out.println(test);
-        }
 
         while (!pq.isEmpty()) {
             for (int i = 0; i < priorities.length; i++) {
