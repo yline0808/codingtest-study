@@ -27,15 +27,15 @@ public class Test01_fibonacci {
     public static long[] d2 = new long[100];
 
     public static long fibonacci3(int x) {
-        d[1] = 1;
-        d[2] = 1;
+        d2[1] = 1;
+        d2[2] = 1;
         if (x <= 2)
             return 1;
 
         for (int i = 3; i <= x; i++) {
-            d[i] = d[i - 1] + d[i - 2];
+            d2[i] = d2[i - 1] + d2[i - 2];
         }
-        return d[x];
+        return d2[x];
     }
 
     public static void main(String[] args) {
