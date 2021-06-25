@@ -47,7 +47,7 @@ public class Nnumber {
         while (targetString.length() < m * t) {
             targetString += Integer.toString(startNum++, n);
         }
-
+        
         for (int i = 0; i < t; i++) {
             retString += targetString.charAt(p - 1 + i * m);
         }
