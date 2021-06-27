@@ -17,18 +17,20 @@ public class BigNumMake {
     }
 
     public static String solution(String number, int k) {
-        String answer = "";
-        int cnt = 0;
-        int j = 0;
-        for (int i = 0; i < number.length(); i++) {
+        StringBuilder answer = new StringBuilder();
+        char max;
+        int idx = 0;
 
-            if (cnt < k && number.charAt(i) < number.charAt(i + 1)) {
-                cnt++;
-                continue;
+        for (int i = 0; i < number.length() - k; i++) {
+            max = '0';
+            for (int j = idx; j <= k + i; j++) {
+                if (max < number.charAt(j)) {
+                    max = number.charAt(j);
+                    idx = j + 1;
+                }
             }
-            answer += number.charAt(i);
+            answer.append(max);
         }
-
-        return answer;
+        return answer.toString();
     }
 }
