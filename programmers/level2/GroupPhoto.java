@@ -7,6 +7,8 @@ import java.util.Map;
  * 제목 : 단체사진 찍기
  * url : https://programmers.co.kr/learn/courses/30/lessons/1835
  * 유형 : 2017 카카오코드 본선
+ * 
+ * 참고 : https://onejunu.tistory.com/92
  */
 
 public class GroupPhoto {
