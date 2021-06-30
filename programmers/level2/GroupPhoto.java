@@ -1,7 +1,6 @@
 package programmers.level2;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /*
  * 제목 : 단체사진 찍기

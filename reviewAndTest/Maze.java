@@ -58,6 +58,7 @@ public class Maze {
                 }
             }
         }
+        MyLibs.pList(map);
         return map[n - 1][m - 1];
     }
 
