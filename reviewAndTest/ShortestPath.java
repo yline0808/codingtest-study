@@ -4,36 +4,36 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-class Node implements Comparable<Node> {
-    private int index;
-    private int distance;
-
-    public Node(int index, int distance) {
-        this.index = index;
-        this.distance = distance;
-    }
-
-    public int getIndex() {
-        return this.index;
-    }
-
-    public int getDistance() {
-        return this.distance;
-    }
-
-    public String toString() {
-        return "[" + this.index + "]:" + this.distance + " ";
-    }
-
-    @Override
-    public int compareTo(Node other) {
-        if (this.distance < other.distance)
-            return -1;
-        return 1;
-    }
-}
-
 public class ShortestPath {
+    static class Node implements Comparable<Node> {
+        private int index;
+        private int distance;
+
+        public Node(int index, int distance) {
+            this.index = index;
+            this.distance = distance;
+        }
+
+        public int getIndex() {
+            return this.index;
+        }
+
+        public int getDistance() {
+            return this.distance;
+        }
+
+        public String toString() {
+            return "[" + this.index + "]:" + this.distance + " ";
+        }
+
+        @Override
+        public int compareTo(Node other) {
+            if (this.distance < other.distance)
+                return -1;
+            return 1;
+        }
+    }
+
     public static final int INF = (int) 1e9;
     public static int n, m, start;
     public static ArrayList<ArrayList<Node>> graph = new ArrayList<>();

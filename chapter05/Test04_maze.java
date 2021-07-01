@@ -10,33 +10,33 @@ import mylib.MyLibs;
  * 1이 적힌 칸으로만 이동하는 최소 칸의 갯수를 구하시오
  */
 
-class Node04 {
-    private int x;
-    private int y;
-
-    public Node04(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getX() {
-        return this.x;
-    }
-
-    public int getY() {
-        return this.y;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-}
-
 public class Test04_maze {
+    static class Node {
+        private int x;
+        private int y;
+
+        public Node(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public int getX() {
+            return this.x;
+        }
+
+        public int getY() {
+            return this.y;
+        }
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public void setY(int y) {
+            this.y = y;
+        }
+    }
+
     public static int[][] map = { { 1, 0, 1, 0, 1, 0 }, { 1, 1, 1, 1, 1, 1 }, { 0, 0, 0, 0, 0, 1 },
             { 1, 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1, 1 } };
     public static int n = 5, m = 6;
@@ -45,11 +45,11 @@ public class Test04_maze {
     public static int[] dy = { -1, 1, 0, 0 };
 
     public static int bfs(int x, int y) {
-        Queue<Node04> q = new LinkedList<>();
-        q.offer(new Node04(x, y));
+        Queue<Node> q = new LinkedList<>();
+        q.offer(new Node(x, y));
 
         while (!q.isEmpty()) {
-            Node04 node = q.poll();
+            Node node = q.poll();
             x = node.getX();
             y = node.getY();
 
@@ -63,7 +63,7 @@ public class Test04_maze {
                     continue;
                 if (map[ny][nx] == 1) {
                     map[ny][nx] = map[y][x] + 1;
-                    q.offer(new Node04(nx, ny));
+                    q.offer(new Node(nx, ny));
                 }
             }
         }

@@ -11,42 +11,42 @@ import java.util.PriorityQueue;
  * 현재 가장 가꾸운 노드를 저장하기 위한 목적으로만 우선순위 큐를 추가로 이용
  */
 
-class Node02 implements Comparable<Node02> {
-    private int index;
-    private int distance;
-
-    public Node02(int index, int distance) {
-        this.index = index;
-        this.distance = distance;
-    }
-
-    public int getIndex() {
-        return this.index;
-    }
-
-    public int getDistance() {
-        return this.distance;
-    }
-
-    public String toString() {
-        return "[" + index + "]:" + distance + " ";
-    }
-
-    @Override
-    public int compareTo(Node02 other) {
-        if (this.distance < other.distance)
-            return -1;
-        return 1;
-    }
-}
-
 public class Test01_shortestPath2 {
+    static class Node implements Comparable<Node> {
+        private int index;
+        private int distance;
+
+        public Node(int index, int distance) {
+            this.index = index;
+            this.distance = distance;
+        }
+
+        public int getIndex() {
+            return this.index;
+        }
+
+        public int getDistance() {
+            return this.distance;
+        }
+
+        public String toString() {
+            return "[" + index + "]:" + distance + " ";
+        }
+
+        @Override
+        public int compareTo(Node other) {
+            if (this.distance < other.distance)
+                return -1;
+            return 1;
+        }
+    }
+
     // 임시로 무한 표시
     public static final int INF = (int) 1e9;
     // 순서대로 노드 수, 간선의 수, 시작 노드
     public static int n, m, start;
     // 그래프
-    public static ArrayList<ArrayList<Node02>> graph = new ArrayList<ArrayList<Node02>>();
+    public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>();
     // 최단 거리 저장
     public static int[] d = new int[100001];
 
@@ -55,11 +55,11 @@ public class Test01_shortestPath2 {
                 { 4, 3, 3 }, { 4, 5, 1 }, { 5, 3, 1 }, { 5, 6, 2 } };
 
         for (int i = 0; i <= n; i++) {
-            graph.add(new ArrayList<Node02>());
+            graph.add(new ArrayList<Node>());
         }
 
         for (int i = 0; i < m; i++) {
-            graph.get(arr[i][0]).add(new Node02(arr[i][1], arr[i][2]));
+            graph.get(arr[i][0]).add(new Node(arr[i][1], arr[i][2]));
         }
 
         for (int i = 0; i < graph.size(); i++) {
@@ -71,12 +71,12 @@ public class Test01_shortestPath2 {
     }
 
     public static void dijkstra(int start) {
-        PriorityQueue<Node02> pq = new PriorityQueue<>();
-        pq.offer(new Node02(start, 0));
+        PriorityQueue<Node> pq = new PriorityQueue<>();
+        pq.offer(new Node(start, 0));
         d[start] = 0;
 
         while (!pq.isEmpty()) {
-            Node02 node = pq.poll();
+            Node node = pq.poll();
             int dist = node.getDistance();
             int now = node.getIndex();
 
@@ -88,7 +88,7 @@ public class Test01_shortestPath2 {
 
                 if (cost < d[graph.get(now).get(i).getIndex()]) {
                     d[graph.get(now).get(i).getIndex()] = cost;
-                    pq.offer(new Node02(graph.get(now).get(i).getIndex(), cost));
+                    pq.offer(new Node(graph.get(now).get(i).getIndex(), cost));
                 }
             }
         }

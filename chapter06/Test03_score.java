@@ -5,30 +5,30 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-class Student implements Comparable<Student> {
-    private String name;
-    private int score;
-
-    public Student(String name, int score) {
-        this.name = name;
-        this.score = score;
-    }
-
-    public String toString() {
-        return this.name + " " + this.score;
-    }
-
-    @Override
-    public int compareTo(Student o) {
-        // TODO Auto-generated method stub
-        if (this.score < o.score) {
-            return -1;
-        }
-        return 1;
-    }
-}
-
 public class Test03_score {
+    static class Student implements Comparable<Student> {
+        private String name;
+        private int score;
+
+        public Student(String name, int score) {
+            this.name = name;
+            this.score = score;
+        }
+
+        public String toString() {
+            return this.name + " " + this.score;
+        }
+
+        @Override
+        public int compareTo(Student o) {
+            // TODO Auto-generated method stub
+            if (this.score < o.score) {
+                return -1;
+            }
+            return 1;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("input length : ");

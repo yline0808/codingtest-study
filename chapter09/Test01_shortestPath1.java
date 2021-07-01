@@ -8,35 +8,35 @@ import java.util.Arrays;
  * 1번 문제는 구현은 간단하지만 시간복잡도가 별로임
  */
 
-class Node01 {
-    private int index;
-    private int distance;
-
-    public Node01(int index, int distance) {
-        this.index = index;
-        this.distance = distance;
-    }
-
-    public int getIndex() {
-        return this.index;
-    }
-
-    public int getDistance() {
-        return this.distance;
-    }
-
-    public String toString() {
-        return "[" + index + "]:" + distance + " ";
-    }
-}
-
 public class Test01_shortestPath1 {
+    static class Node {
+        private int index;
+        private int distance;
+
+        public Node(int index, int distance) {
+            this.index = index;
+            this.distance = distance;
+        }
+
+        public int getIndex() {
+            return this.index;
+        }
+
+        public int getDistance() {
+            return this.distance;
+        }
+
+        public String toString() {
+            return "[" + index + "]:" + distance + " ";
+        }
+    }
+
     // 임시로 무한 표시
     public static final int INF = (int) 1e9;
     // 순서대로 노드 수, 간선의 수, 시작 노드
     public static int n, m, start;
     // 그래프
-    public static ArrayList<ArrayList<Node01>> graph = new ArrayList<ArrayList<Node01>>();
+    public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>();
     // 방문여부 체크
     public static boolean[] visited = new boolean[100001];
     // 최단 거리 저장
@@ -47,11 +47,11 @@ public class Test01_shortestPath1 {
                 { 4, 3, 3 }, { 4, 5, 1 }, { 5, 3, 1 }, { 5, 6, 2 } };
 
         for (int i = 0; i <= n; i++) {
-            graph.add(new ArrayList<Node01>());
+            graph.add(new ArrayList<Node>());
         }
 
         for (int i = 0; i < m; i++) {
-            graph.get(arr[i][0]).add(new Node01(arr[i][1], arr[i][2]));
+            graph.get(arr[i][0]).add(new Node(arr[i][1], arr[i][2]));
         }
 
         for (int i = 0; i < graph.size(); i++) {
