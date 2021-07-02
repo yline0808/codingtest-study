@@ -20,7 +20,6 @@ public class GroupPhoto {
         System.out.println(solution(2, data2));
     }
 
-    static String[] d;
     static HashMap<Character, Integer> hm;
     static boolean[] visited;
     static int[] ch;

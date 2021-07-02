@@ -3,6 +3,8 @@ package programmers.level2;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import mylib.MyLibs;
+
 /*
  * 제목 : 게임 맵 최단거리
  * url : https://programmers.co.kr/learn/courses/30/lessons/1844
@@ -64,7 +66,7 @@ public class GameMapSortCut {
             }
         }
         answer = maps[maps.length - 1][maps[0].length - 1];
-
+        MyLibs.pList(maps);
         return answer == 1 ? -1 : answer;
     }
 }
