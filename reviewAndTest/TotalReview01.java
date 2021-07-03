@@ -540,9 +540,148 @@ public class TotalReview01 {
                 }
             }
         }
-        MyLibs.pList(town);
+
         for (int i = 1; i <= n; i++)
             answer += town[i] <= k ? 1 : 0;
+
+        return answer;
+    }
+
+    public static String solMakeBigNumber(String number, int k) {
+        StringBuilder answer = new StringBuilder();
+        int idx = 0;
+
+        for (int i = 0; i < number.length() - k; i++) {
+            char max = '0';
+            for (int j = idx; j <= k + i; j++) {
+                if (max < number.charAt(j)) {
+                    max = number.charAt(j);
+                    idx = j + 1;
+                }
+            }
+            answer.append(max);
+        }
+
+        return answer.toString();
+    }
+
+    public static boolean isFitBracket(String s) {
+        Stack<Character> stack = new Stack<>();
+        char[] open = { '(', '{', '[' };
+        char[] close = { ')', '}', ']' };
+
+        for (int i = 0; i < 3; i++)
+            if (close[i] == s.charAt(0))
+                return false;
+
+        for (int i = 0; i < s.length(); i++) {
+            boolean result = false;
+
+            for (int j = 0; j < 3; j++) {
+                if (!stack.isEmpty() && stack.peek() == open[j] && s.charAt(i) == close[j]) {
+                    result = true;
+                    break;
+                }
+            }
+
+            if (result)
+                stack.pop();
+            else
+                stack.push(s.charAt(i));
+        }
+
+        return stack.isEmpty();
+    }
+
+    public static int solBraketRotation(String s) {
+        int answer = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (isFitBracket(s.substring(i, s.length()) + s.substring(0, i)))
+                answer++;
+        }
+
+        return answer;
+    }
+
+    public static int solBridgeTruck(int bridge_length, int weight, int[] truck_weights) {
+        Queue<Integer> q = new LinkedList<>();
+        int answer = bridge_length;
+        int max = 0;
+
+        for (int w : truck_weights) {
+            while (true) {
+                if (q.isEmpty()) {
+                    q.offer(w);
+                    answer++;
+                    max += w;
+                    break;
+                } else if (q.size() == bridge_length) {
+                    max -= q.poll();
+                } else {
+                    if (max + w > weight) {
+                        q.offer(0);
+                        answer++;
+                    } else {
+                        q.offer(w);
+                        max += w;
+                        answer++;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return answer;
+    }
+
+    public static int[] solCarpet(int brown, int yellow) {
+        for (int i = 1; i <= yellow; i++)
+            if (yellow % i == 0 && ((yellow / i + i) * 2 + 4) == brown)
+                return new int[] { yellow / i + 2, i + 2 };
+        return null;
+    }
+
+    public static int[] solStock(int[] prices) {
+        int[] answer = new int[prices.length];
+
+        for (int i = 0; i < prices.length; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
+                if (prices[i] <= prices[j])
+                    answer[i]++;
+                else {
+                    answer[i]++;
+                    break;
+                }
+            }
+        }
+
+        return answer;
+    }
+
+    public static long[] solDifferentBit(long[] numbers) {
+        long[] answer = new long[numbers.length];
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0)
+                answer[i] = numbers[i] + 1;
+            else {
+                String binaryString = Long.toBinaryString(numbers[i]);
+                int lastZero = binaryString.lastIndexOf('0');
+                int nextOne = binaryString.indexOf('1', lastZero);
+
+                if (lastZero == -1) {
+                    binaryString = Long.toBinaryString(++numbers[i]);
+                    binaryString = binaryString.substring(0, 2)
+                            + binaryString.substring(2, binaryString.length()).replace("0", "1");
+                } else {
+                    binaryString = binaryString.substring(0, lastZero) + "0"
+                            + binaryString.substring(lastZero + 1, nextOne) + "1"
+                            + binaryString.substring(nextOne + 1, binaryString.length());
+                }
+                answer[i] = Long.parseLong(binaryString, 2);
+            }
+        }
 
         return answer;
     }
@@ -716,46 +855,56 @@ public class TotalReview01 {
                 System.out.println(solDelivery(6, road2, 4));
                 break;
             case 21:
-                System.out.printf("===%d. ===\n", sel);
-                System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                System.out.printf("===%d. 큰 수 만들기===\n", sel);
+                System.out.println(94);
+                System.out.println(solMakeBigNumber("1924", 2));
+                System.out.println(3234);
+                System.out.println(solMakeBigNumber("1231234", 3));
+                System.out.println(775841);
+                System.out.println(solMakeBigNumber("4177252841", 4));
                 break;
             case 22:
-                System.out.printf("===%d. ===\n", sel);
-                System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                System.out.printf("===%d. 괄호 회전하기===\n", sel);
+                System.out.println(3);
+                System.out.println(solBraketRotation("[](){}"));
+                System.out.println(2);
+                System.out.println(solBraketRotation("}]()[{"));
+                System.out.println(0);
+                System.out.println(solBraketRotation("[)(]"));
+                System.out.println(0);
+                System.out.println(solBraketRotation("}}}"));
                 break;
             case 23:
+                int[] truck_weights1 = { 7, 4, 5, 6 };
+                int[] truck_weights2 = { 10 };
+                int[] truck_weights3 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
                 System.out.printf("===%d. ===\n", sel);
-                System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                System.out.println(8);
+                System.out.println(solBridgeTruck(2, 10, truck_weights1));
+                System.out.println(101);
+                System.out.println(solBridgeTruck(100, 100, truck_weights2));
+                System.out.println(110);
+                System.out.println(solBridgeTruck(100, 100, truck_weights3));
                 break;
             case 24:
-                System.out.printf("===%d. ===\n", sel);
-                System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                System.out.printf("===%d. 카펫===\n", sel);
+                System.out.println("4\t3");
+                MyLibs.pList(solCarpet(10, 2));
+                System.out.println("3\t3");
+                MyLibs.pList(solCarpet(8, 1));
+                System.out.println("8\t6");
+                MyLibs.pList(solCarpet(24, 24));
                 break;
             case 25:
-                System.out.printf("===%d. ===\n", sel);
-                System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                int[] prices = { 1, 2, 3, 2, 3 };
+                System.out.printf("===%d. 주식가격===\n", sel);
+                System.out.println("4\t3\t1\t1\t0");
+                MyLibs.pList(solStock(prices));
                 break;
             case 26:
-                System.out.printf("===%d. ===\n", sel);
-                System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                System.out.printf("===%d. 2개 이하로 다른 비트===\n", sel);
+                System.out.println("3\t11");
+                MyLibs.pList(solDifferentBit(new long[] { 2, 7 }));
                 break;
             case 27:
                 System.out.printf("===%d. ===\n", sel);
