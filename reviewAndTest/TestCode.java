@@ -1,6 +1,7 @@
 package reviewAndTest;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import mylib.MyLibs;
 
@@ -24,11 +25,24 @@ public class TestCode {
         return answer;
     }
 
+    public static void test01() {
+        HashMap<String, Integer> hm = new HashMap<>();
+        hm.put("t", 1);
+        hm.put("e", 2);
+        hm.put("s", 3);
+        hm.put("y", 4);
+
+        for (HashMap.Entry<String, Integer> entry : hm.entrySet()) {
+            System.out.println(entry.toString());
+        }
+    }
+
     public static void main(String[] args) {
         // int[][] v = { { 1, 4 }, { 3, 4 }, { 3, 10 } };
         int[][] v = { { 1, 1 }, { 2, 2 }, { 1, 2 } };
 
         System.out.println("1\t10");
         MyLibs.pList(solution(v));
+        test01();
     }
 }
