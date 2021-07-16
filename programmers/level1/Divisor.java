@@ -10,6 +10,7 @@ package programmers.level1;
 
 public class Divisor {
     public static void main(String[] args) {
+        System.out.println(43);
         System.out.println(solution(13, 17));
     }
 

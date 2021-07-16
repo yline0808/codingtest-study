@@ -29,7 +29,7 @@ public class FileSort {
             @Override
             public int compare(String s1, String s2) {
                 String head1 = s1.split("[0-9]")[0];
-                String head2 = s1.split("[0-9]")[0];
+                String head2 = s2.split("[0-9]")[0];
                 int compareHead = head1.toUpperCase().compareTo(head2.toUpperCase());
 
                 return compareHead == 0
@@ -44,7 +44,7 @@ public class FileSort {
     public static int getNumber(String str) {
         StringBuilder num = new StringBuilder();
         for (char c : str.toCharArray())
-            if (Character.isDigit(c) && num.length() <= 5)
+            if (Character.isDigit(c) && num.length() < 5)
                 num.append(c);
             else
                 break;
