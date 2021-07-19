@@ -11,6 +11,7 @@ public class GymSuit {
         int n = 5;
         int[] lost = { 2, 4 };
         int[] reserve = { 1, 3, 5 };
+        System.out.println(5);
         System.out.println(solution(n, lost, reserve));
     }
 
