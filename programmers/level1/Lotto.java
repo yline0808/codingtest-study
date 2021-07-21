@@ -12,6 +12,7 @@ public class Lotto {
     public static void main(String[] args) {
         int[] lottos = { 44, 1, 0, 0, 31, 25 };
         int[] winNums = { 31, 10, 45, 1, 6, 19 };
+        MyLibs.pList(new int[] { 3, 5 });
         MyLibs.pList(solution(lottos, winNums));
     }
 

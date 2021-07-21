@@ -6,7 +6,7 @@ import mylib.MyLibs;
 
 /*
  * 문제 : K번째수
- * url : https://programmers.co.kr/learn/courses/30/lessons/42748?language=java
+ * url : https://programmers.co.kr/learn/courses/30/lessons/42748
  * 유형 : 정렬
  */
 
@@ -14,6 +14,7 @@ public class KNum {
     public static void main(String[] args) {
         int[] array = { 1, 5, 2, 6, 3, 7, 4 };
         int[][] commands = { { 2, 5, 3 }, { 4, 4, 1 }, { 1, 7, 3 } };
+        MyLibs.pList(new int[] { 5, 6, 3 });
         MyLibs.pList(solution(array, commands));
     }
 
