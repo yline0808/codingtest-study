@@ -2,6 +2,12 @@ package programmers.level1;
 
 import java.util.Arrays;
 
+/*
+ * 문제 : 정수 내림차순으로 배치하기
+ * url : https://programmers.co.kr/learn/courses/30/lessons/12933
+ * 유형 : 연습문제
+ */
+
 public class NumberSort {
     public static void main(String[] args) {
         System.out.println(873211);
