@@ -11,6 +11,7 @@ import java.util.Collections;
 
 public class MaxMinNum {
     public static void main(String[] args) {
+        System.out.println("-4 -1");
         System.out.println(solution("-1 -2 -3 -4"));
     }
 

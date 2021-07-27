@@ -12,10 +12,14 @@ public class MatrixMultiply {
     public static void main(String[] args) {
         int[][] arr1 = { { 2, 3, 2 }, { 4, 2, 4 }, { 3, 1, 4 } };
         int[][] arr2 = { { 5, 4, 3 }, { 2, 4, 1 }, { 3, 1, 1 } };
+        MyLibs.pList(new int[][] { { 22, 22, 11 }, { 36, 28, 18 }, { 29, 20, 14 } });
+        System.out.println();
         MyLibs.pList(solution(arr1, arr2));
         System.out.println();
         int[][] arr3 = { { 1, 4 }, { 3, 2 }, { 4, 1 } };
         int[][] arr4 = { { 3, 3 }, { 3, 3 } };
+        MyLibs.pList(new int[][] { { 15, 15 }, { 15, 15 }, { 15, 15 } });
+        System.out.println();
         MyLibs.pList(solution(arr3, arr4));
     }
 
