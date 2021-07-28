@@ -32,12 +32,8 @@ public class BracketRotation {
         boolean flag = false;
 
         for (int i = 0; i < 3; i++)
-            if (s.charAt(0) == closeBracket[i]) {
-                flag = true;
-                break;
-            }
-        if (flag)
-            return false;
+            if (s.charAt(0) == closeBracket[i])
+                return false;
         for (int i = 0; i < s.length(); i++) {
             flag = false;
             for (int j = 0; j < 3; j++) {

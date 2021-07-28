@@ -24,10 +24,10 @@ public class Camouflage {
         HashMap<String, Integer> hm = new HashMap<>();
 
         for (String[] cloth : clothes)
-            hm.put(cloth[1], hm.getOrDefault(cloth[1], 0) + 1);
+            hm.put(cloth[1], hm.getOrDefault(cloth[1], 1) + 1);
 
         for (int val : hm.values())
-            answer *= (val + 1);
+            answer *= val;
 
         return --answer;
     }

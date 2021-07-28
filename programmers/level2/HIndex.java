@@ -7,7 +7,7 @@ import java.util.Arrays;
  * url : https://programmers.co.kr/learn/courses/30/lessons/42747
  * 유형 : 정렬
  * 
- * 참과 : 문제가 모르겠고 이건 안나올듯
+ * 참고 : 문제가 모르겠고 이건 안나올듯
  */
 
 public class HIndex {
