@@ -15,6 +15,7 @@ import java.util.Comparator;
 public class BigNumber {
     public static void main(String[] args) {
         int[] numbers = { 3, 30, 34, 5, 9 };
+        System.out.println(9534330);
         System.out.println(solution(numbers));
     }
 
