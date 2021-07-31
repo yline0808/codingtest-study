@@ -16,6 +16,7 @@ public class FunctionDevelopment {
     public static void main(String[] args) {
         int[] progresses = { 93, 30, 55 };
         int[] speeds = { 1, 30, 5 };
+        MyLibs.pList(new int[] { 2, 1 });
         MyLibs.pList(solution(progresses, speeds));
     }
 
@@ -38,6 +39,7 @@ public class FunctionDevelopment {
                 count++;
             } else {
                 list.add(count);
+                start = next;
                 count = 1;
             }
         }

@@ -12,8 +12,10 @@ import java.util.PriorityQueue;
 public class Printer {
     public static void main(String[] args) {
         int[] priorities = { 2, 1, 3, 2 };
+        System.out.println(1);
         System.out.println(solution(priorities, 2));
         int[] priorities2 = { 1, 1, 9, 1, 1, 1 };
+        System.out.println(5);
         System.out.println(solution(priorities2, 0));
     }
 

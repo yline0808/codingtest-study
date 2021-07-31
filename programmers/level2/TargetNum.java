@@ -11,6 +11,7 @@ public class TargetNum {
         int[] numbers = { 1, 1, 1, 1, 1 };
         int target = 3;
 
+        System.out.println(5);
         System.out.println(solution(numbers, target));
     }
 
