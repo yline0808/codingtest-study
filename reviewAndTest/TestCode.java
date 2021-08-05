@@ -37,6 +37,16 @@ public class TestCode {
         }
     }
 
+    public static void test02() {
+        for (int i = 0; i <= 9; ++i) {
+            System.out.print(i);
+        }
+        System.out.println();
+        for (int i = 0; i <= 9; i++) {
+            System.out.print(i);
+        }
+    }
+
     public static void main(String[] args) {
         // int[][] v = { { 1, 4 }, { 3, 4 }, { 3, 10 } };
         int[][] v = { { 1, 1 }, { 2, 2 }, { 1, 2 } };
@@ -44,5 +54,6 @@ public class TestCode {
         System.out.println("1\t10");
         MyLibs.pList(solution(v));
         test01();
+        test02();
     }
 }

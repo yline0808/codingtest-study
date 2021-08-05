@@ -10,7 +10,7 @@ public class Test04_floor {
     public static int[] d = new int[1000];
 
     public static void main(String[] args) {
-        int n = 3;
+        int n = 30;
 
         d[0] = 1;
         d[1] = 3;
