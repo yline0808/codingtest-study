@@ -43,7 +43,9 @@ public class Test03_message {
     public static int n, m, start;
     public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>();
     public static int[] d = new int[30001];
-    public static int[][] arr = { { 1, 2, 4 }, { 1, 3, 2 } };
+    // public static int[][] arr = { { 1, 2, 4 }, { 1, 3, 2 } };
+    public static int[][] arr = { { 1, 2, 2 }, { 1, 3, 5 }, { 1, 4, 1 }, { 2, 3, 3 }, { 2, 4, 2 }, { 3, 2, 3 },
+            { 3, 6, 5 }, { 4, 3, 3 }, { 4, 5, 1 }, { 5, 3, 1 }, { 5, 6, 2 } };
 
     public static void dijkstra(int start) {
         PriorityQueue<Node> pq = new PriorityQueue<>();
@@ -70,8 +72,10 @@ public class Test03_message {
     }
 
     public static void main(String[] args) {
-        n = 3;
-        m = 2;
+        // n = 3;
+        // m = 2;
+        n = 6;
+        m = 11;
         start = 1;
 
         Arrays.fill(d, INF);
