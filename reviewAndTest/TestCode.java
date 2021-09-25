@@ -2,6 +2,7 @@ package reviewAndTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 import mylib.MyLibs;
 
@@ -47,13 +48,51 @@ public class TestCode {
         }
     }
 
+    public static void test03() {
+        HashMap<Integer, String> hm = new HashMap<>();
+
+        for (int i = 65; i < 91; i++) {
+            hm.put(i - 64, (char) i + "");
+        }
+        for (HashMap.Entry<Integer, String> entry : hm.entrySet()) {
+            System.out.println(entry.getKey() + "|||" + entry.getValue());
+        }
+    }
+
+    public static void test04() {
+        ArrayList<String> strarr = new ArrayList<>();
+        ArrayList<ArrayList<String>> arr = new ArrayList<>();
+        strarr.add("a");
+        strarr.add("b");
+        strarr.add("c");
+        strarr.add("d");
+
+        strarr.remove("a.");
+
+        System.out.println(strarr.toString());
+    }
+
+    public static void test05() {
+        HashMap<String, Integer> hm = new HashMap<>();
+        for (int i = 'A'; i <= 'Z'; i++) {
+            hm.put((char) i + "", i - 'A' + 1);
+        }
+
+        for (HashMap.Entry<String, Integer> set : hm.entrySet()) {
+            System.out.println(set);
+        }
+    }
+
     public static void main(String[] args) {
         // int[][] v = { { 1, 4 }, { 3, 4 }, { 3, 10 } };
-        int[][] v = { { 1, 1 }, { 2, 2 }, { 1, 2 } };
+        // int[][] v = { { 1, 1 }, { 2, 2 }, { 1, 2 } };
 
-        System.out.println("1\t10");
-        MyLibs.pList(solution(v));
-        test01();
-        test02();
+        // System.out.println("1\t10");
+        // MyLibs.pList(solution(v));
+        // test01();
+        // test02();
+        // test03();
+        // test04();
+        test05();
     }
 }

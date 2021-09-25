@@ -46,7 +46,7 @@ class SHA256 {
 
 public class Lotto {
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        String[] myInfo = { "류요선", "19950808", "RyuYoSeon", "A RH(+)", "17768", "1573035261" };
+        String[] myInfo = { "yline", "yline.tistory.com", "Y_LINE's_Repository", "android", "codingtest", "0808" };
         String salt = "2000000000";
         int[] lottoIndexs = new int[6];
         int[] lottoNumbers = new int[6];
